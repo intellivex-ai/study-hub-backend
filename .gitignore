@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+database/*.json
+!database/schema.json
+.vscode/
+.idea/
+*.swp
+*.swo
+database/ml_shadow_logs.json
