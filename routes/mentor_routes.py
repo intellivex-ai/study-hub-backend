@@ -1,7 +1,6 @@
 from flask import Blueprint, jsonify
 import json
 import os
-import numpy as np
 from ai.ml_logic import calculate_weakness_scores, calculate_dropout_risk, calculate_study_profile
 
 mentor = Blueprint("mentor", __name__)

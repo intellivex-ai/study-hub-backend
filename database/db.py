@@ -9,7 +9,8 @@ def load_users():
     try:
         with open(DB_FILE, 'r') as f:
             return json.load(f)
-    except:
+    except Exception as e:
+        print(f"Error loading users: {e}")
         return []
 
 def save_user(user):

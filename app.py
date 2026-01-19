@@ -19,4 +19,6 @@ app.register_blueprint(mentor, url_prefix='/mentor')
 app.register_blueprint(impact, url_prefix='/impact')
 
 if __name__ == "__main__":
+    if app.config['SECRET_KEY'] == 'supersecretkey':
+        print("WARNING: Using default SECRET_KEY. Please set a strong key in production.")
     app.run(debug=True)

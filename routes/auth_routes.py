@@ -5,7 +5,7 @@ auth = Blueprint('auth', __name__)
 @auth.route("/register", methods=["POST"])
 def register():
     # Refresh users list from file to be safe
-    from database.db import users, save_user, load_users
+    from database.db import save_user, load_users
     users = load_users()
     
     data = request.json

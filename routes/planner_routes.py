@@ -1,6 +1,4 @@
 from flask import Blueprint, request, jsonify
-import os
-import json
 from ai.planner import generate_study_plan
 from ai.mentor import mentor_message
 from ai.ml_logic import calculate_weakness_scores, calculate_dropout_risk, recommend_time_range, calculate_study_profile

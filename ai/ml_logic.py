@@ -187,7 +187,7 @@ def calculate_study_profile(history):
             try:
                 hour = int(ts.split('T')[1].split(':')[0])
                 times.append(hour)
-            except: pass
+            except Exception: pass
     
     morning_count = sum(1 for h in times if 5 <= h <= 11)
     night_count = sum(1 for h in times if 20 <= h or h <= 4)
@@ -231,4 +231,4 @@ def persist_shadow_log(model_name, data):
         if len(logs) > 100: logs = logs[-100:]
         with open(log_file, 'w') as f:
             json.dump(logs, f, indent=4)
-    except: pass
+    except Exception: pass
